@@ -3,7 +3,7 @@ const BOOK_DATA = 'bookData';
 
 const bookData = [];
 
-function setUp() {
+const setUp = () => {
   if (localStorage.getItem(BOOK_DATA) === null) {
     localStorage.setItem(BOOK_DATA, JSON.stringify(bookData));
   }
@@ -30,11 +30,11 @@ function storageAvailable(type = LOCAL_STORAGE) {
   }
 }
 
-function setBooks(arrBooks) {
+const setBooks = (arrBooks) => {
   localStorage.setItem(BOOK_DATA, JSON.stringify(arrBooks));
 }
 
-function getBooks() {
+const getBooks = () => {
   return JSON.parse(localStorage.getItem(BOOK_DATA));
 }
 
