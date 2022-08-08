@@ -38,11 +38,11 @@ class BooksManager {
     if (this.storageAvailable) this.arrBooks = storage.getBooks();
   }
 
-  setToLocalStorage() {
+  setToLocalStorage = () => {
     if (this.storageAvailable) storage.setBooks(this.books);
   }
 
-  displayBooks() {
+  displayBooks = () => {
     this.getFromLocalStorage();
 
     this.booksContainer.innerHTML = '';
@@ -64,7 +64,7 @@ class BooksManager {
     }
   }
 
-  addBook(title, author) {
+  addBook = (title, author) => {
     const book = {};
     book.title = title;
     book.author = author;
@@ -73,7 +73,7 @@ class BooksManager {
     this.displayBooks();
   }
 
-  removeBook(index) {
+  removeBook = (index) => {
     this.arrBooks = this.arrBooks.filter((_, position) => position !== index);
     this.setToLocalStorage();
     this.displayBooks();
