@@ -7,10 +7,10 @@ const setUp = () => {
   if (localStorage.getItem(BOOK_DATA) === null) {
     localStorage.setItem(BOOK_DATA, JSON.stringify(bookData));
   }
-}
+};
 
 /**
- * 
+ *
  * @param {*} type string
  * @returns Boolean if the browser supports local storage
  */
@@ -32,10 +32,8 @@ function storageAvailable(type = LOCAL_STORAGE) {
 
 const setBooks = (arrBooks) => {
   localStorage.setItem(BOOK_DATA, JSON.stringify(arrBooks));
-}
+};
 
-const getBooks = () => {
-  return JSON.parse(localStorage.getItem(BOOK_DATA));
-}
+const getBooks = () => JSON.parse(localStorage.getItem(BOOK_DATA));
 
 export { storageAvailable, setBooks, getBooks };
