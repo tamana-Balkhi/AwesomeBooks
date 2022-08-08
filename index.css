@@ -101,7 +101,7 @@ header {
   width: 40%;
   margin: 0 auto;
   padding: 2%;
- /* display: none;*/
+  display: none;
 }
 
 .addform h2 {
@@ -135,7 +135,7 @@ input:hover {
 }
 
 .contact {
- /* display: none;*/
+  display: none;
   flex-direction: column;
   align-items: center;
 }
