@@ -1,5 +1,6 @@
 /* eslint-disable no-plusplus */
 import * as storage from './dataStorage.js';
+import { DateTime } from './luxon.js';
 
 const booksContainer = document.getElementById('booksContainer');
 const inputTitle = document.getElementById('title');
@@ -14,9 +15,9 @@ const mainTitle = document.querySelector('.main-title');
 const currentTime = document.querySelector('#currentTime');
 
 setInterval(() => {
-  const date = new Date();
-  currentTime.textContent = date;
-}, 500);
+  const dt = DateTime.local();
+  currentTime.textContent = dt;
+}, 1000);
 
 class BooksManager {
   constructor(booksContainer, storage) {
